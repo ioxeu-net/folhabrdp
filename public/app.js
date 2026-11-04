@@ -43,7 +43,7 @@ async function checkHealth() {
     }
 
     setStatus(dbStatus, "Conectado", "health-ok");
-    detail.textContent = `Consulta concluída. ${dbData.tables.length} tabela(s) encontrada(s) no banco.`;
+    detail.textContent = `Consulta concluída. ${dbData.table_count} tabela(s) encontrada(s) no banco.`;
   } catch (error) {
     setStatus(apiStatus, "Não conectado", "health-error");
     setStatus(dbStatus, "Não verificado", "health-pending");
