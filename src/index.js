@@ -72,7 +72,7 @@ async function healthDatabase(env) {
       ok: true,
       service: "folhabrdp-api",
       database: "connected",
-      tables: (result.results || []).map(row => row.name)
+      table_count: (result.results || []).length
     });
   } catch {
     return responseJson({
