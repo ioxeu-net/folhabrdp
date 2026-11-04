@@ -1,0 +1,12 @@
+name = "folhabrdp-api"
+main = "src/index.js"
+compatibility_date = "2026-11-04"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "folhabrdp"
+database_id = "1b3b2411-9c69-4927-9b71-d7b616d59e8f"
+migrations_dir = "migrations"
+
+[vars]
+APP_ORIGIN = "https://folhabrdp.pages.dev"
