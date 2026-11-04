@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2b">
+  <meta name="description" content="Folha DP BR — gestão de Departamento Pessoal para escritórios contábeis e empresas.">
+  <title>Folha DP BR — Seu Painel</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="Folha DP BR início">
+        <span class="brand-mark">DP</span>
+        <span><strong>Folha DP BR</strong><small>Seu Painel</small></span>
+      </a>
+      <div class="workspace">
+        <span class="eyebrow">AMBIENTE</span>
+        <strong>Área de trabalho</strong>
+        <small>Organização ainda não conectada</small>
+      </div>
+      <nav aria-label="Navegação principal">
+        <span class="nav-label">VISÃO GERAL</span>
+        <a class="nav-item active" href="#inicio"><span>▦</span> Painel inicial</a>
+        <span class="nav-label">DEPARTAMENTO PESSOAL</span>
+        <a class="nav-item disabled" href="#empresas"><span>▤</span> Empresas e clientes</a>
+        <a class="nav-item disabled" href="#colaboradores"><span>♙</span> Colaboradores</a>
+        <a class="nav-item disabled" href="#folha"><span>▧</span> Folha de pagamento</a>
+        <a class="nav-item disabled" href="#rotinas"><span>◷</span> Férias e 13º salário</a>
+        <a class="nav-item disabled" href="#rescisao"><span>⇥</span> Rescisões</a>
+        <span class="nav-label">CONTROLE</span>
+        <a class="nav-item disabled" href="#ocorrencias"><span>⚑</span> Central de ocorrências</a>
+        <a class="nav-item disabled" href="#relatorios"><span>▥</span> Relatórios</a>
+      </nav>
+      <div class="sidebar-foot">
+        <span class="status-dot"></span>
+        <span>Estrutura em implantação</span>
+      </div>
+    </aside>
+
+    <main id="inicio" class="main-content">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">FOLHA DP BR / VISÃO GERAL</span>
+          <h1>Seu Painel</h1>
+        </div>
+        <div class="topbar-actions">
+          <span class="environment-tag">AMBIENTE DE CONFIGURAÇÃO</span>
+          <button class="profile-button" type="button" aria-label="Perfil">DP</button>
+        </div>
+      </header>
+
+      <section class="welcome">
+        <div>
+          <span class="eyebrow">GESTÃO DE DEPARTAMENTO PESSOAL</span>
+          <h2>Uma operação organizada começa aqui.</h2>
+          <p>Centralize empresas, colaboradores, rotinas trabalhistas e conferências em um único ambiente.</p>
+        </div>
+        <div class="welcome-symbol" aria-hidden="true">DP</div>
+      </section>
+
+      <section class="section-heading">
+        <div><span class="eyebrow">ESTRUTURA DO SISTEMA</span><h2>Módulos planejados</h2></div>
+        <span class="muted">Disponibilidade gradual</span>
+      </section>
+
+      <section class="module-grid" aria-label="Módulos do sistema">
+        <article class="module-card"><span class="module-icon">▤</span><div><h3>Empresas e clientes</h3><p>Cadastros e organização por empresa.</p></div><span class="module-state">Planejado</span></article>
+        <article class="module-card"><span class="module-icon">♙</span><div><h3>Colaboradores</h3><p>Dados contratuais e histórico funcional.</p></div><span class="module-state">Planejado</span></article>
+        <article class="module-card"><span class="module-icon">▧</span><div><h3>Folha de pagamento</h3><p>Competências, eventos e conferências.</p></div><span class="module-state">Planejado</span></article>
+        <article class="module-card"><span class="module-icon">◷</span><div><h3>Férias e 13º salário</h3><p>Controle de períodos e vencimentos.</p></div><span class="module-state">Planejado</span></article>
+        <article class="module-card"><span class="module-icon">⇥</span><div><h3>Rescisões</h3><p>Fluxos e memória de cálculo.</p></div><span class="module-state">Planejado</span></article>
+        <article class="module-card"><span class="module-icon">⚑</span><div><h3>Central de ocorrências</h3><p>Solicitações e documentos para análise.</p></div><span class="module-state">Planejado</span></article>
+      </section>
+
+      <section class="system-panel">
+        <div>
+          <span class="eyebrow">CONECTIVIDADE</span>
+          <h2>Diagnóstico dos serviços</h2>
+          <p>Esta verificação consulta a API e o banco configurado. Ela não executa cálculos nem altera dados.</p>
+        </div>
+        <div class="health-list">
+          <div class="health-row"><span>API Folha DP BR</span><strong id="api-status" class="health-pending">Verificando...</strong></div>
+          <div class="health-row"><span>Banco D1</span><strong id="db-status" class="health-pending">Aguardando API</strong></div>
+          <button id="refresh-health" class="secondary-button" type="button">Verificar novamente</button>
+          <p id="health-detail" class="health-detail" role="status">Aguarde a primeira consulta.</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Folha DP BR</span><span>Plataforma de Departamento Pessoal</span><span>Versão inicial 0.1.0</span>
+      </footer>
+    </main>
+  </div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
